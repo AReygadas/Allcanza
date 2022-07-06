@@ -1,0 +1,195 @@
+
+.containerB {
+    position: relative;
+    display: flex;
+}
+
+.containerB .card {
+    position: relative;
+    width: 320px;
+    height: 450px;
+    background: #232323;
+    border-radius: 20px;
+    overflow: hidden;
+    margin: 3%;
+}
+
+.containerB .card:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    clip-path: circle(150px at 80% 20%);
+    transition: 0.5s ease-in-out;    
+}
+
+.containerB .card:nth-child(1):before {
+    background:linear-gradient(117deg, rgba(114,219,250,1) 0%, rgba(0,6,61,1) 100%);
+}
+.containerB .card:nth-child(2):before {
+    background:linear-gradient(117deg, rgba(181,250,114,1) 0%, rgba(0,61,25,1) 100%);
+}
+.containerB .card:nth-child(3):before {
+    background: linear-gradient(117deg, rgba(9,0,93,1) 0%, rgba(167,0,0,1) 100%);
+}
+
+.containerB .card:hover:before {
+    clip-path: circle(300px at 80% -20%);
+}
+
+.containerB .card:after {
+    content: "Cels";
+    position: absolute;
+    top: 30%;
+    left: -20%;
+    font-size: 12em;
+    font-weight: 800;
+    font-style: italic;
+    color: rgba(255, 255, 255, 0.04);
+}
+
+.containerB .card .imgBx {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1000;
+    width: 100%;
+    height: 100%;
+    transition: .5s;
+}
+
+.containerB .card:hover .imgBx {
+    top: 0%;
+    transform: translateY(-25%);
+    /* bug  */
+}
+
+.containerB .card .imgBx img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(20deg);
+    width: 270px;
+    width: 80%;
+}
+
+.containerB .card .contentBx {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    transition: 1s;
+    z-index: 90;
+}
+
+.containerB .card:hover .contentBx {
+    height: 210px;
+}
+
+.containerB .card .contentBx h2 {
+    position: relative;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #fff;
+}
+
+.containerB .card .contentBx .size,
+.containerB .card .contentBx .color {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 20px;
+    transition: .5s;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.containerB .card:hover .contentBx .size {
+    opacity: 1;
+    visibility: visible;
+    transition-delay: .5s;
+}
+
+.containerB .card:hover .contentBx .color {
+    opacity: 1;
+    visibility: visible;
+    transition-delay: .6s;
+}
+
+.containerB .card .contentBx .size h3,
+.containerB .card .contentBx .color h3 {
+    color: white;
+    font-weight: 300;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-right: 10px;
+}
+
+.containerB .card .contentBx .size span {
+    width: 26px;
+    height: 26px;
+    text-align: center;
+    line-height: 26px;
+    font-size: 14px;
+    display: inline-block;
+    color: #111;
+    background: #fff;
+    margin: 0 5px;
+    transition: .5s;
+    color: #111;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.containerB .card .contentBx .size span:hover {  /* other bug */
+    background: #B90000;
+}
+
+.containerB .card .contentBx .color span {
+    width: 20px;
+    height: 20px;
+    background: #ff0;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.containerB .card .contentBx .color span:nth-child(2) {
+     background: #1BBFE9;
+}
+
+.containerB .card .contentBx .color span:nth-child(3) {
+     background: #1B2FE9;
+}
+
+.containerB .card .contentBx .color span:nth-child(4) {
+     background: #080481;
+}
+
+.containerB .card .contentBx a {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #fff;
+    border-radius: 4px;
+    margin-top: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    color: #111;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: .5s;
+}
+
+
+.containerB .card:hover .contentBx a {
+    opacity: 1;
+    transform: translateY(0px);
+    transition-delay: .7s;
+} 
+
+
+  
